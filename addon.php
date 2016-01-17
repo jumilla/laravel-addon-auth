@@ -24,6 +24,8 @@ return [
         'commands' => [],
     ],
     'http' => [
+        'domain' => env('APP_AUTH_DOMAIN'),
+        'prefix' => env('APP_AUTH_PATH', 'auth'),
         'middlewares' => [],
         'route_middlewares' => [
             'auth' => Http\Middleware\Authenticate::class,
